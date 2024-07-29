@@ -15,4 +15,3 @@ if ($conexion_juego->connect_error) {
 }
 
 ?>
-

@@ -1,14 +1,14 @@
 <?php
 include "modelo/conexion.php";
 
-// Consulta las categorías de la base de datos remota y almacénalas en un arreglo
+
 $categoria_query = $conexion_categoria->query("SELECT * FROM Categoria");
 $categorias = [];
 while ($categoria = $categoria_query->fetch_assoc()) {
     $categorias[$categoria['id']] = $categoria['nombre'];
 }
 
-// Consulta los videojuegos de la base de datos local
+
 $sql = "SELECT id, nombre, fecha_publicacion, categoria_id FROM Videojuegos";
 $result = $conexion_juego->query($sql);
 if (!$result) {
