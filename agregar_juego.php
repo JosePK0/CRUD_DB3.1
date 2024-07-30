@@ -1,7 +1,6 @@
 <?php
 include "modelo/conexion.php";
 
-// Obtener el último ID registrado y sumarle 1
 $result = $conexion_juego->query("SELECT MAX(id) as max_id FROM Videojuegos");
 $row = $result->fetch_assoc();
 $new_id = $row['max_id'] + 1;
